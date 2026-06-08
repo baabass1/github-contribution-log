@@ -1,15 +1,16 @@
-# Contribution [#]: [Issue Title]
+# Contribution 1: Refine Test Cases
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** 1
+**Student:** Yakubu Mohammed Abasss  
+**Issue:** https://github.com/ascii-supply-networks/dagster-slurm/issues/36
+**Status:** Phase I Complete
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because it is a good opportunity to contribute to an open-source project while improving my understanding of software testing and CI/CD workflows. The issue involves reviewing and extending test coverage, which aligns with my experience in Python, testing, and software development. 
+I am interested in learning how the project validates functionality across different execution environments and how test suites are organized in a production open-source project. By working on this issue, I hope to strengthen my skills in testing, debugging, and contributing to collaborative software projects.
 
 ---
 
@@ -17,19 +18,24 @@
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+The project currently has several remaining test scenarios that have not yet been implemented. As a result, some functionality may not be fully validated across different execution modes and environments. This creates gaps in test coverage and may allow bugs or regressions to go undetected.
 
 ### Expected Behavior
 
-[What should happen?]
+All planned test scenarios should be implemented and integrated into the test suite. The tests should reliably verify the expected behavior of the corresponding features and run successfully in the project's CI pipeline.
 
 ### Current Behavior
 
-[What actually happens?]
+Several test cases are still listed as incomplete in the issue. While some test scenarios have already been implemented, the remaining cases are not yet covered by automated tests.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+- Test suite
+- CI/CD workflow
+- Local launcher tests
+- Session launcher tests
+- Cluster re-use tests
+- HET-related tests
 
 ---
 
