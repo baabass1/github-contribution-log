@@ -91,7 +91,7 @@ Using UMPIRE framework (adapted):
 6. Test the item in-game to confirm the correct sprite appears when held.
 7. Check whether related door shield items have similar issues.
 
-**Implement:** https://github.com/baabass1/SecondCity/tree/fix-door-shield-inhand-icon
+**Implement (Branch):** https://github.com/baabass1/SecondCity/tree/fix-door-shield-inhand-icon
 
 **Review:** 
 - Follow the project's contribution guidelines.
