@@ -19,24 +19,23 @@ This issue is well-scoped and beginner-friendly, which makes it a good starting 
 
 ### Problem Description
 
-The project currently has several remaining test scenarios that have not yet been implemented. As a result, some functionality may not be fully validated across different execution modes and environments. This creates gaps in test coverage and may allow bugs or regressions to go undetected.
+The door shield item is missing a valid inhand icon state. As a result, the item does not display correctly when a player holds it. According to the maintainer, the required sprite already exists, but the item's icon state assignments do not correctly reference it.
 
 ### Expected Behavior
 
-All planned test scenarios should be implemented and integrated into the test suite. The tests should reliably verify the expected behavior of the corresponding features and run successfully in the project's CI pipeline.
+The door shield should display the correct sprite when held in a player's hand. The item's `icon_state`, `worn_icon_state`, and `inhand_icon_state` values should match the corresponding sprite names defined in the sprite files.
 
 ### Current Behavior
 
-Several test cases are still listed as incomplete in the issue. While some test scenarios have already been implemented, the remaining cases are not yet covered by automated tests.
+When a player picks up the door shield, the expected inhand icon is not displayed. This occurs because the item is missing a valid inhand icon state assignment or the assigned state does not match the available sprite names.
 
 ### Affected Components
 
-- Test suite
-- CI/CD workflow
-- Local launcher tests
-- Session launcher tests
-- Cluster re-use tests
-- HET-related tests
+- Door shield item definition
+- `icon_state` assignments
+- `worn_icon_state` assignments
+- `inhand_icon_state` assignments
+- Related sprite (`.dmi`) files containing the door shield icons
 
 ---
 
