@@ -43,7 +43,6 @@ When a player picks up the door shield, the expected inhand icon is not displaye
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
 I created a fork of the SecondCity repository and reviewed the issue description and maintainer comments. The maintainer indicated that the issue is likely caused by missing or incorrect `icon_state`, `worn_icon_state`, or `inhand_icon_state` assignments rather than missing sprite assets. Before making any code changes, I plan to inspect the item definition and verify that the assigned sprite state names match those available in the corresponding sprite files.
 
 ### Steps to Reproduce
