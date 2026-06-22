@@ -1,16 +1,17 @@
-# Contribution 1: Refine Test Cases
+# Contribution 1: This Door Doesn't Have an Inhand Icon State
 
 **Contribution Number:** 1
 **Student:** Yakubu Mohammed Abasss  
-**Issue:** https://github.com/ascii-supply-networks/dagster-slurm/issues/36
+**Issue:** https://github.com/DarkPack13/SecondCity/issues/515  
 **Status:** Phase I Complete
 
 ---
 
 ## Why I Chose This Issue
 
-I chose this issue because it is a good opportunity to contribute to an open-source project while improving my understanding of software testing and CI/CD workflows. The issue involves reviewing and extending test coverage, which aligns with my experience in Python, testing, and software development. 
-I am interested in learning how the project validates functionality across different execution environments and how test suites are organized in a production open-source project. By working on this issue, I hope to strengthen my skills in testing, debugging, and contributing to collaborative software projects.
+I chose this issue because it provides an opportunity to contribute to a large and long-running open-source project with an active development community. SecondCity is a complex game project that combines programming, asset management, and collaborative development, making it an excellent environment for learning how large software systems are maintained and improved.
+
+This issue is well-scoped and beginner-friendly, which makes it a good starting point for understanding the project's structure and development workflow. I am particularly interested in learning how item definitions, sprites, and visual states are connected within the codebase and how developers track down and resolve issues that affect gameplay. By working on this issue, I hope to strengthen my skills in debugging, code investigation, and contributing effectively to a collaborative open-source project.
 
 ---
 
