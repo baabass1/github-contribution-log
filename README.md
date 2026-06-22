@@ -67,30 +67,44 @@ I created a fork of the SecondCity repository and reviewed the issue description
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+The problem is caused by missing or incorrect `icon_state`, `worn_icon_state`, or `inhand_icon_state` assignments for the door shield item. The required sprite assets appear to already exist, so the issue is likely a mismatch between the assigned icon state names and the sprite names available in the corresponding `.dmi` files.
+
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+Review the door shield item definition and verify that its icon state assignments match existing sprite names. If any assignments are missing or incorrect, update them to reference the correct sprite states. After making the changes, test the item in-game to confirm that the correct inhand sprite is displayed when the item is held.
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** The door shield item does not display the correct inhand icon when held. The issue is caused by missing or incorrect icon state assignments.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** Many items in the codebase already define `icon_state`, `worn_icon_state`, and `inhand_icon_state` values that correspond to sprite names in `.dmi` files. The door shield should follow the same pattern.
 
 **Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+1. Locate the door shield item definition in the codebase.
+2. Identify the current `icon_state`, `worn_icon_state`, and `inhand_icon_state` assignments.
+3. Find the corresponding sprite definitions in the relevant `.dmi` files.
+4. Verify that the required sprite states already exist.
+5. Update any missing or incorrect icon state assignments.
+6. Test the item in-game to confirm the correct sprite appears when held.
+7. Check whether related door shield items have similar issues.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** https://github.com/baabass1/SecondCity/tree/fix-door-shield-inhand-icon
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** 
+- Follow the project's contribution guidelines.
+- Keep the fix limited to the affected item definitions.
+- Avoid modifying sprite assets unless necessary.
+- Verify that changes do not affect unrelated items.
+- Ensure code style matches existing project conventions.
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** 
+- Spawn or obtain a door shield item.
+- Hold the item in hand and verify that the correct inhand sprite is displayed.
+- Confirm that no runtime errors or visual issues occur.
+- Compare behavior before and after the fix to verify the issue is resolved.
 
 ---
 
