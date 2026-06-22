@@ -1,4 +1,4 @@
-# Contribution 1: This Door Doesn't Have an Inhand Icon State
+gi# Contribution 1: This Door Doesn't Have an Inhand Icon State
 
 **Contribution Number:** 1
 **Student:** Yakubu Mohammed Abasss  
@@ -44,18 +44,23 @@ When a player picks up the door shield, the expected inhand icon is not displaye
 ### Environment Setup
 
 [Notes on setting up your local development environment - challenges you faced, how you solved them]
+I created a fork of the SecondCity repository and reviewed the issue description and maintainer comments. The maintainer indicated that the issue is likely caused by missing or incorrect `icon_state`, `worn_icon_state`, or `inhand_icon_state` assignments rather than missing sprite assets. Before making any code changes, I plan to inspect the item definition and verify that the assigned sprite state names match those available in the corresponding sprite files.
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Launch the game and connect to a local test server.
+2. Spawn or obtain a door shield item.
+3. Pick up the door shield and hold it in hand.
+4. Observe the item's appearance while it is held.
+5. Verify whether the expected inhand sprite is displayed.
+6. Inspect the item definition and compare the assigned `icon_state`, `worn_icon_state`, and `inhand_icon_state` values with the available sprite names in the corresponding `.dmi` files.
+7. Confirm that the issue occurs because the item is missing a valid inhand icon state assignment or references an incorrect sprite state.
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+- **Commit showing reproduction:** https://github.com/baabass1/SecondCity/tree/fix-door-shield-inhand-icon
+- **Screenshots/logs:** https://github.com/DarkPack13/SecondCity/issues/515
+- **My findings:** The issue appears to be caused by missing or incorrect `icon_state`, `worn_icon_state`, or `inhand_icon_state` assignments. The maintainer indicated that the required sprites already exist, so the fix will likely involve matching the icon state assignments to the correct sprite names in the relevant `.dmi` files.
 
 ---
 
