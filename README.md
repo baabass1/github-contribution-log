@@ -3,7 +3,7 @@ gi# Contribution 1: This Door Doesn't Have an Inhand Icon State
 **Contribution Number:** 1
 **Student:** Yakubu Mohammed Abasss  
 **Issue:** https://github.com/DarkPack13/SecondCity/issues/515  
-**Status:** Phase II Complete / Phase III In Progress
+**Status:** Phase III In Progress
 
 ---
 
@@ -112,14 +112,14 @@ Using UMPIRE framework (adapted):
 
 ### Unit Tests
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+- [ ] Test case 1: Verify that the door shield has a valid `icon_state`, `worn_icon_state`, and `inhand_icon_state` assignment.
+- [ ] Test case 2: Verify that each assigned icon state matches an existing sprite in the corresponding `.dmi` file.
+- [ ] Test case 3: Verify that the door shield correctly displays its inhand sprite after the icon state assignment is updated.
 
 ### Integration Tests
 
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+- [ ] Integration scenario 1: Spawn or obtain a door shield in-game and confirm the correct inhand sprite is displayed when the item is held.
+- [ ] Integration scenario 2: Verify that the fix does not affect the door shield's inventory icon or worn appearance and that other door shield variants continue to function correctly.
 
 ### Manual Testing
 
