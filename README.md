@@ -141,19 +141,36 @@ Using UMPIRE framework (adapted):
 
 ## Implementation Notes
 
-### Week [X] Progress
 
-[What you built this week, challenges faced, decisions made]
+### Week [4] Progress
 
-### Week [Y] Progress
+- Selected a new issue after switching to a project with an active maintainer.
+- Contacted the maintainer and confirmed the likely root cause of the issue.
+- Forked the repository and created the development branch `fix-door-shield-inhand-icon`.
+- Reviewed the issue description, maintainer comments, and relevant project documentation.
+- Documented the issue summary, reproduction process, solution approach, implementation plan, and testing strategy in the contribution README.
+- Identified the components likely involved in the fix, including the door shield item definition and related sprite state assignments.
+- Decided to keep the fix limited to correcting existing icon state assignments rather than modifying sprite assets.
 
-[Continue documenting as you work]
+### Week [5] Progress
 
-### Code Changes
+- Locate the door shield item definition in the codebase.
+- Verify the current `icon_state`, `worn_icon_state`, and `inhand_icon_state` assignments.
+- Compare the assigned values with the available sprite names in the corresponding `.dmi` files.
+- Update any missing or incorrect icon state assignments.
+- Test the changes in-game to verify that the correct inhand sprite is displayed.
+- Check related door shield items for similar issues.
+- Submit a pull request after confirming the fix works as expected.
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+## Code Changes
+
+- **Files modified:** None yet. Code implementation has not started.
+- **Key commits:** Created the development branch `fix-door-shield-inhand-icon` and completed the project planning and documentation for Phase III.
+- **Approach decisions:**
+  - Keep the fix focused on the affected door shield item.
+  - Reuse the existing sprite assets rather than creating new sprites.
+  - Follow existing project patterns for assigning `icon_state`, `worn_icon_state`, and `inhand_icon_state`.
+  - Verify the fix in-game before submitting a pull request.
 
 ---
 
