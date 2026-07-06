@@ -144,8 +144,6 @@ Using UMPIRE framework (adapted):
 
 ### Week [4] Progress
 
-- Selected a new issue after switching to a project with an active maintainer.
-- Contacted the maintainer and confirmed the likely root cause of the issue.
 - Forked the repository and created the development branch `fix-door-shield-inhand-icon`.
 - Reviewed the issue description, maintainer comments, and relevant project documentation.
 - Documented the issue summary, reproduction process, solution approach, implementation plan, and testing strategy in the contribution README.
@@ -160,17 +158,19 @@ Using UMPIRE framework (adapted):
 - Update any missing or incorrect icon state assignments.
 - Test the changes in-game to verify that the correct inhand sprite is displayed.
 - Check related door shield items for similar issues.
-- Submit a pull request after confirming the fix works as expected.
 
 ## Code Changes
 
-- **Files modified:** None yet. Code implementation has not started.
+- **Files modified (locally on computer. I have not committed yet):**
+  - Door shield item definition file containing the door shield object.
+  - Related item definition(s) where `icon_state`, `worn_icon_state`, and `inhand_icon_state` are assigned.
+  - No sprite (`.dmi`) files are expected to be modified unless investigation shows they are missing the required sprite state.
 - **Key commits:** Created the development branch `fix-door-shield-inhand-icon` and completed the project planning and documentation for Phase III.
 - **Approach decisions:**
   - Keep the fix focused on the affected door shield item.
   - Reuse the existing sprite assets rather than creating new sprites.
   - Follow existing project patterns for assigning `icon_state`, `worn_icon_state`, and `inhand_icon_state`.
-  - Verify the fix in-game before submitting a pull request.
+  - Verify the fix in-game before committing code and submitting a pull request.
 
 ---
 
