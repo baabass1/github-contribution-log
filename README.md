@@ -125,6 +125,18 @@ Using UMPIRE framework (adapted):
 
 [What you tested manually and results]
 
+- **Test:** Reviewed the GitHub issue description and maintainer comments.  
+  **Result:** Confirmed that the issue is likely caused by missing or incorrect `icon_state`, `worn_icon_state`, or `inhand_icon_state` assignments.
+
+- **Test:** Inspected the expected reproduction steps provided by the maintainer.  
+  **Result:** Identified a clear process for reproducing the issue in a local test environment.
+
+- **Test:** Examined the affected components and related sprite definitions.  
+  **Result:** Determined that the required sprite assets already exist, so the fix will likely involve correcting the icon state assignments rather than creating new sprites.
+
+- **Test:** Compared the reported behavior with the expected behavior.  
+  **Result:** Confirmed that the door shield should display an inhand sprite when held, but currently does not due to an incorrect or missing icon state assignment.
+
 ---
 
 ## Implementation Notes
