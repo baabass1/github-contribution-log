@@ -171,6 +171,21 @@ Using UMPIRE framework (adapted):
   - Reuse the existing sprite assets rather than creating new sprites.
   - Follow existing project patterns for assigning `icon_state`, `worn_icon_state`, and `inhand_icon_state`.
   - Verify the fix in-game before committing code and submitting a pull request.
+ 
+ ### Challenges Faced
+
+**Challenge:** I attempted to build and test the project locally on macOS, but the build failed because the project downloaded a Linux (ELF) version of the Hypnagogic icon cutter, which cannot execute on macOS.
+
+**Resolution:** I verified that the code change itself was isolated to `modular_darkpack/modules/doors/code/door_item.dm`, documented the platform limitation, completed manual verification through code inspection and the maintainer's reproduction steps, and pushed the fix for maintainer review.
+
+### Code Changes
+
+- **Files modified:** `modular_darkpack/modules/doors/code/door_item.dm`
+- **Key commit:** `8d37b5f0426` – *Fix missing inhand icon state for door shield*
+- **Approach decisions:**
+  - Kept the fix limited to `modular_darkpack/modules/doors/code/door_item.dm` to avoid modifying unrelated files.
+  - Added the missing `inhand_icon_state` assignment because the existing sprite assets and `icon_state` were already present.
+  - Chose a minimal, targeted change that matches the maintainer's description of the issue and reduces the risk of introducing regressions.
 
 ---
 
