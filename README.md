@@ -3,7 +3,7 @@ gi# Contribution 1: This Door Doesn't Have an Inhand Icon State
 **Contribution Number:** 1
 **Student:** Yakubu Mohammed Abasss  
 **Issue:** https://github.com/DarkPack13/SecondCity/issues/515  
-**Status:** Phase IV In Progress (Phase III Complete)
+**Status:** Phase III Complete
 
 ---
 
