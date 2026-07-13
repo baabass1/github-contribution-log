@@ -1,4 +1,4 @@
-gi# Contribution 1: This Door Doesn't Have an Inhand Icon State
+# Contribution 1: This Door Doesn't Have an Inhand Icon State
 
 **Contribution Number:** 1
 **Student:** Yakubu Mohammed Abasss  
