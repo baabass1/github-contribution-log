@@ -110,32 +110,33 @@ Using UMPIRE framework (adapted):
 
 ## Testing Strategy
 
-### Unit Tests
+### Planned Unit Tests
 
-- [ ] Test case 1: Verify that the door shield has a valid `icon_state`, `worn_icon_state`, and `inhand_icon_state` assignment.
-- [ ] Test case 2: Verify that each assigned icon state matches an existing sprite in the corresponding `.dmi` file.
-- [ ] Test case 3: Verify that the door shield correctly displays its inhand sprite after the icon state assignment is updated.
+- **Test case 1:** Verify that the door shield has valid `icon_state` and `inhand_icon_state` assignments.
+- **Test case 2:** Verify that the assigned icon states correspond to existing sprite states in the appropriate `.dmi` file.
+- **Test case 3:** Verify that the door shield correctly displays its in-hand sprite after the `inhand_icon_state` assignment is added.
 
-### Integration Tests
+### Planned Integration Tests
 
-- [ ] Integration scenario 1: Spawn or obtain a door shield in-game and confirm the correct inhand sprite is displayed when the item is held.
-- [ ] Integration scenario 2: Verify that the fix does not affect the door shield's inventory icon or worn appearance and that other door shield variants continue to function correctly.
+- **Integration scenario 1:** Spawn or obtain a door shield in-game and confirm that the correct in-hand sprite is displayed when the item is held.
+- **Integration scenario 2:** Verify that the fix does not affect the door shield's inventory icon or other door shield variants.
 
 ### Manual Testing
 
-[What you tested manually and results]
-
 - **Test:** Reviewed the GitHub issue description and maintainer comments.  
-  **Result:** Confirmed that the issue is likely caused by missing or incorrect `icon_state`, `worn_icon_state`, or `inhand_icon_state` assignments.
+  **Result:** Confirmed that the issue is caused by a missing `inhand_icon_state` assignment rather than missing sprite assets.
 
-- **Test:** Inspected the expected reproduction steps provided by the maintainer.  
-  **Result:** Identified a clear process for reproducing the issue in a local test environment.
+- **Test:** Reviewed the maintainer's documented reproduction steps.  
+  **Result:** Confirmed the expected workflow for reproducing and verifying the issue in-game.
 
-- **Test:** Examined the affected components and related sprite definitions.  
-  **Result:** Determined that the required sprite assets already exist, so the fix will likely involve correcting the icon state assignments rather than creating new sprites.
+- **Test:** Inspected the affected source file (`modular_darkpack/modules/doors/code/door_item.dm`) and related sprite references.  
+  **Result:** Verified that the existing sprite assets already exist and only the missing `inhand_icon_state` assignment was required.
 
-- **Test:** Compared the reported behavior with the expected behavior.  
-  **Result:** Confirmed that the door shield should display an inhand sprite when held, but currently does not due to an incorrect or missing icon state assignment.
+- **Test:** Reviewed the implemented code change after adding `inhand_icon_state = "door"`.  
+  **Result:** Confirmed that the fix is isolated to the affected door shield item and does not modify unrelated files.
+
+- **Test:** Attempted to build and test the project locally on macOS.  
+  **Result:** The build could not be completed because the project downloaded a Linux (ELF) version of the Hypnagogic icon cutter, which cannot execute on macOS. The code change was therefore verified through source code inspection and comparison with the maintainer's issue description rather than in-game execution.
 
 ---
 
