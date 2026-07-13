@@ -143,22 +143,23 @@ Using UMPIRE framework (adapted):
 ## Implementation Notes
 
 
-### Week [4] Progress
+## Week [4] Progress
 
 - Forked the repository and created the development branch `fix-door-shield-inhand-icon`.
 - Reviewed the issue description, maintainer comments, and relevant project documentation.
 - Documented the issue summary, reproduction process, solution approach, implementation plan, and testing strategy in the contribution README.
-- Identified the components likely involved in the fix, including the door shield item definition and related sprite state assignments.
-- Decided to keep the fix limited to correcting existing icon state assignments rather than modifying sprite assets.
+- Identified the affected component (`modular_darkpack/modules/doors/code/door_item.dm`) and confirmed that the required sprite assets already exist.
+- Determined that the issue could be resolved by correcting the icon state assignment rather than modifying sprite assets.
 
-### Week [5] Progress
+## Week [5 and 6] Progress
 
-- Locate the door shield item definition in the codebase.
-- Verify the current `icon_state`, `worn_icon_state`, and `inhand_icon_state` assignments.
-- Compare the assigned values with the available sprite names in the corresponding `.dmi` files.
-- Update any missing or incorrect icon state assignments.
-- Test the changes in-game to verify that the correct inhand sprite is displayed.
-- Check related door shield items for similar issues.
+- Located the door shield item definition in `modular_darkpack/modules/doors/code/door_item.dm`.
+- Verified the existing `icon_state` assignment and confirmed that `inhand_icon_state` was missing.
+- Implemented the fix by adding `inhand_icon_state = "door"` to the door shield item definition.
+- Committed the change with the message **"Fix missing inhand icon state for door shield"** and pushed it to the `fix-door-shield-inhand-icon` branch.
+- Performed manual code review and verified that the change was isolated to the affected file.
+- Attempted to build and test the project locally on macOS, but the build could not be completed because the project downloaded a Linux (ELF) version of the Hypnagogic icon cutter, which cannot execute on macOS.
+- Updated the README with implementation notes, testing documentation, challenges encountered, and code changes.
 
 ## Code Changes
 
