@@ -3,7 +3,7 @@
 **Contribution Number:** 1
 **Student:** Yakubu Mohammed Abasss  
 **Issue:** https://github.com/DarkPack13/SecondCity/issues/515  
-**Status:** Phase III Complete
+**Status:** Phase IV In Progress
 
 ---
 
@@ -185,15 +185,16 @@ Using UMPIRE framework (adapted):
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** https://github.com/DarkPack13/SecondCity/pull/516
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** Fixed the missing in-hand icon state for the door shield item by adding the missing `inhand_icon_state` assignment. The change was intended to restore the correct in-hand appearance of the door shield while keeping the fix limited to the affected item definition.
 
 **Maintainer Feedback:**
-- [Date]: [Summary of feedback received]
-- [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+- **July 14, 2026:** The maintainer explained that the missing `inhand_icon_state` is not the root cause because the game already falls back to `icon_state` when `inhand_icon_state` is not set. They identified the real issue as an incorrect icon assignment when doors are converted into items after being bashed. They also pointed out that one of the hand sprite states (`shop`) should be renamed to match the inventory icon states.
+- **July 19, 2026:** I reviewed the maintainer's explanation and I would be updating my implementation to address the underlying icon assignment rather than adding `inhand_icon_state`. The pull request will be revised based on this feedback.
+
+**Status:** Iterating
 
 ---
 
