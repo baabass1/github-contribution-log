@@ -185,7 +185,7 @@ Using UMPIRE framework (adapted):
 
 ## Pull Request
 
-**PR Link:** https://github.com/DarkPack13/SecondCity/issues/515
+**PR Link:** https://github.com/DarkPack13/SecondCity/pull/1219
 
 **PR Description:** Fixed the missing in-hand icon state for the door shield item by adding the missing `inhand_icon_state` assignment. The change was intended to restore the correct in-hand appearance of the door shield while keeping the fix limited to the affected item definition.
 
